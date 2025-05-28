@@ -1,0 +1,11 @@
+﻿team,match_code,match_date,player_name,position,champion,objectives_score,victory,kills,deaths,assists,cs,gold,damage_dealt,damage_received,vision_score,wards_placed
+Team1,20250519-5,"May 19, 2025",,Top,None,0,True,2,6,21,2,7163,15994,19629,None,8
+Team1,20250519-5,"May 19, 2025",,Top,None,0,True,10,None,None,192,12166,12094,18726,28,8
+Team1,20250519-5,"May 19, 2025",,Top,None,0,True,145,5,15,156,13136,11180,16905,4,16
+Team1,20250519-5,"May 19, 2025",,Top,None,0,True,6,3,17,11,9368,27169,37814,15,3
+Team1,20250519-5,"May 19, 2025",,Top,None,0,True,5,4,5,152,8689,29286,13933,14,9
+Team2,20250519-5,"May 19, 2025",,Top,None,0,True,5,8,3,109,8795,24764,17735,8,7
+Team2,20250519-5,"May 19, 2025",,Top,None,0,True,1,7,9,23,6074,6868,21569,None,13
+Team2,20250519-5,"May 19, 2025",,Top,None,0,True,3,4,5,133,7574,9985,16493,10,5
+Team2,20250519-5,"May 19, 2025",,Top,None,0,True,8,4,6,96,8994,17451,37601,2,6
+Team2,20250519-5,"May 19, 2025",,Top,None,0,True,3,4,3,145,8081,14261,23202,8,4

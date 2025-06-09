@@ -1,0 +1,11 @@
+﻿team,match_code,match_date,player_name,position,champion,objectives_score,victory,game_duration,kills,deaths,assists,cs,gold,damage_dealt,damage_received,vision_score,wards_placed
+Team1,20250519-5,19-May-25,김주헌,Top,Gwen,6,TRUE,2458,5,4,5,152,8689,15994,19629,11,8
+Team1,20250519-5,19-May-25,허균,Mid,Galio,6,TRUE,2458,6,3,17,111,9368,12094,18726,28,8
+Team1,20250519-5,19-May-25,정윤재,Support,Nautilus,6,TRUE,2458,2,6,21,22,7163,11180,16905,44,16
+Team1,20250519-5,19-May-25,이승연,Jungle,Xin zhao,6,TRUE,2458,14,5,15,156,13136,27169,37814,15,3
+Team1,20250519-5,19-May-25,김태형,Adc,Smolder,6,TRUE,2458,10,2,9,192,12166,29286,13933,14,9
+Team2,20250519-5,19-May-25,최광호,Mid,Heimerdinger,2,FALSE,2458,5,8,3,109,8795,24764,17735,8,7
+Team2,20250519-5,19-May-25,문상휘,Support,Blitzcrank,2,FALSE,2458,1,7,9,23,6074,6868,21569,30,13
+Team2,20250519-5,19-May-25,이정웅,Adc,Tristana,2,FALSE,2458,3,4,5,133,7574,9985,16493,10,5
+Team2,20250519-5,19-May-25,심시온,Jungle,Warwick,2,FALSE,2458,8,14,6,96,8994,17451,37601,21,6
+Team2,20250519-5,19-May-25,한종인,Top,Ornn,2,FALSE,2458,3,4,3,145,8081,14261,23202,8,4

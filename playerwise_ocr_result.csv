@@ -1,11 +1,11 @@
-﻿team,match_code,match_date,player_name,position,champion,objectives_score,victory,kills,deaths,assists,cs,gold,damage_dealt,damage_received,vision_score,wards_placed
-Team1,20250519-5,"May 19, 2025",,Top,None,0,True,2,6,21,2,7163,15994,19629,None,8
-Team1,20250519-5,"May 19, 2025",,Top,None,0,True,10,None,None,192,12166,12094,18726,28,8
-Team1,20250519-5,"May 19, 2025",,Top,None,0,True,145,5,15,156,13136,11180,16905,4,16
-Team1,20250519-5,"May 19, 2025",,Top,None,0,True,6,3,17,11,9368,27169,37814,15,3
-Team1,20250519-5,"May 19, 2025",,Top,None,0,True,5,4,5,152,8689,29286,13933,14,9
-Team2,20250519-5,"May 19, 2025",,Top,None,0,True,5,8,3,109,8795,24764,17735,8,7
-Team2,20250519-5,"May 19, 2025",,Top,None,0,True,1,7,9,23,6074,6868,21569,None,13
-Team2,20250519-5,"May 19, 2025",,Top,None,0,True,3,4,5,133,7574,9985,16493,10,5
-Team2,20250519-5,"May 19, 2025",,Top,None,0,True,8,4,6,96,8994,17451,37601,2,6
-Team2,20250519-5,"May 19, 2025",,Top,None,0,True,3,4,3,145,8081,14261,23202,8,4
+﻿team,match_code,match_date,player_name,position,champion,objectives_score,victory,game_duration,kills,deaths,assists,cs,gold,damage_dealt,damage_received,vision_score,wards_placed
+Team1,20250519-6,19-May-25,김주헌,Top,Fiora,0,TRUE,4430,10,9,5,313,20212,49870,59348,4,4
+Team1,20250519-6,19-May-25,이승연,Jungle,Warwick,0,TRUE,4430,10,10,12,21,17432,35306,70966,36,6
+Team1,20250519-6,19-May-25,정윤재,Support,Hwei,0,TRUE,4430,8,12,15,76,13735,47181,39435,51,24
+Team1,20250519-6,19-May-25,허균,Mid,Malphite,0,TRUE,4430,4,8,19,157,13279,27591,45000,32,8
+Team1,20250519-6,19-May-25,김태형,Adc,Xerath,0,TRUE,4430,14,4,14,327,20288,68022,15587,42,19
+Team2,20250519-6,19-May-25,문상휘,Support,Lux,0,FALSE,4430,7,10,19,69,14672,44266,31430,95,35
+Team2,20250519-6,19-May-25,심시온,Jungle,Darius,0,FALSE,4430,25,8,11,319,25397,67131,88521,35,4
+Team2,20250519-6,19-May-25,최광호,Top,Mordekaiser,0,FALSE,4430,4,10,3,158,11878,21345,56927,None,5
+Team2,20250519-6,19-May-25,한종인,Mid,Sylas,0,FALSE,4430,2,6,13,211,14420,25271,62381,20,12
+Team2,20250519-6,19-May-25,이정웅,Adc,Caitlyn,0,FALSE,4430,5,12,8,249,14692,22909,40119,29,12

@@ -12,9 +12,9 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tessera
 
 # 이미지 경로
 image_paths = {
-    "summary": "20250519-5_summary.png",
-    "damage": "20250519-5_damage.png",
-    "vision": "20250519-5_vision.png"
+    "summary": "images/20250519-6_summary.png",
+    "damage": "images/20250519-6_damage.png",
+    "vision": "images/20250519-6_vision.png"
 }
 
 # OCR config
@@ -127,6 +127,7 @@ match = re.search(r"(?P<date>\d{8})-(?P<code_num>\d+)", basename)
 match_code = f"{match.group('date')}-{match.group('code_num')}" if match else "UNKNOWN"
 match_date = match.group("date") if match else "00000000"
 formatted_date = datetime.strptime(match_date, "%Y%m%d").strftime("%B %d, %Y")
+game_duration = 4430
 
 
 # 결과 리스트 초기화
@@ -140,7 +141,8 @@ for i in range(10):
         "position": "Top",
         "champion": "None",
         "objectives_score": 0,
-        "victory": True
+        "victory": True,
+        "game_duration": game_duration
     })
 
 # 이미지별 OCR 수행

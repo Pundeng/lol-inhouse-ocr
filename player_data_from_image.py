@@ -30,27 +30,20 @@ def match_template(source_path, template_path):
     return (x1, y1, x2, y2)
 
 
-def process_image(source, rect=None, save_path=None):
-    if rect is not None:
-        img = cv.imread(source)
-        assert img is not None, "file could not be read, check with os.path.exists()"
+def process_image(source, clean_background=True, save_path=None):
+    img = source
 
-        x1, y1, x2, y2 = rect
-        img = img[y1:y2, x1:x2]
-        img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-    else:
-        img = source
+    if clean_background:
+        # Strong blur to model the background
+        blurred = cv.GaussianBlur(img, (51, 51), 0)
 
-    # Strong blur to model the background
-    blurred = cv.GaussianBlur(img, (51, 51), 0)
+        # Subtract blurred background from original
+        diff = cv.subtract(img, blurred)
 
-    # Subtract blurred background from original
-    diff = cv.subtract(img, blurred)
+        # Optional: normalize contrast
+        img = cv.normalize(diff, None, 0, 255, cv.NORM_MINMAX)
 
-    # Optional: normalize contrast
-    img = cv.normalize(diff, None, 0, 255, cv.NORM_MINMAX)
-
-    img = cv.resize(img, None, fx=3.0, fy=3.0, interpolation=cv.INTER_CUBIC)
+    img = cv.resize(img, None, fx=4.0, fy=4.0, interpolation=cv.INTER_LANCZOS4)
 
     # Apply sharpening kernel before thresholding
     kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
@@ -84,8 +77,12 @@ def main():
     template = "image_template/summary_player_details.PNG"
 
     img = match_template(source, template)
-    # img = process_image(source, img)
+
+    # 숫자 위주
     img = process_image(img)
+
+    # # For player names
+    # img = process_image(img, False)
 
     extract_text(img)
 

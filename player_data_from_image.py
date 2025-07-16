@@ -27,33 +27,34 @@ def match_template(source_path, template_path):
     # cv.destroyAllWindows()
 
     return img[y1:y2, x1:x2]
-    return (x1, y1, x2, y2)
 
 
-def process_image(source, clean_background=True, save_path=None):
+def process_image(source, dilate=True):
     img = source
 
-    if clean_background:
-        # Strong blur to model the background
-        blurred = cv.GaussianBlur(img, (51, 51), 0)
+    # Strong blur to model the background
+    blurred = cv.GaussianBlur(img, (51, 51), 0)
 
-        # Subtract blurred background from original
-        diff = cv.subtract(img, blurred)
+    # Subtract blurred background from original
+    img = cv.subtract(img, blurred)
 
-        # Optional: normalize contrast
-        img = cv.normalize(diff, None, 0, 255, cv.NORM_MINMAX)
+    _, img = cv.threshold(img, 20, 255, cv.THRESH_TOZERO)
 
-    img = cv.resize(img, None, fx=4.0, fy=4.0, interpolation=cv.INTER_LANCZOS4)
+    # Optional: normalize contrast
+    img = cv.normalize(img, None, 0, 255, cv.NORM_MINMAX)
+
+    img = cv.resize(img, None, fx=3.0, fy=3.0, interpolation=cv.INTER_CUBIC)
 
     # Apply sharpening kernel before thresholding
     kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
     img = cv.filter2D(img, -1, kernel)
 
-    if save_path:
-        cv.imwrite(save_path, img)
-    else:
-        cv.imshow("New Image", img)
-        cv.waitKey()
+    if dilate:
+        kernel = np.ones((2, 2), np.uint8)
+        img = cv.dilate(img, kernel, iterations=1)
+
+    cv.imshow("New Image", img)
+    cv.waitKey()
 
     return img
 
@@ -61,34 +62,55 @@ def process_image(source, clean_background=True, save_path=None):
 def extract_text(img):
     reader = easyocr.Reader(["en", "ko"])  # English + Korean
     # results = reader.readtext(img, detail=1)
-    results = reader.readtext(
-        img,
-        detail=1,
-        contrast_ths=0.05,
-        adjust_contrast=0.7,
-    )
+    results = reader.readtext(img, detail=1, contrast_ths=0.05, adjust_contrast=0.7)
 
+    texts, y, i = [], None, -1
+
+    # Group texts in similar y positions together
     for bbox, text, confidence in results:
-        print(f"Detected: '{text}' (confidence: {confidence:.2f}) at {bbox}")
+        if y is None or bbox[0][1] > y + 50:
+            # Start a new row
+            texts.append(text)
+            y = bbox[0][1]
+            i += 1
+        else:
+            # join the current text to the row
+            texts[i] += f" {text}"
+
+        # print(f"Detected: '{text}' (confidence: {confidence:.2f}) at {bbox}")
+
+    [print(text) for text in texts]
+
+    return texts
 
 
 def main():
-    source = "../lol_inhouse_images/20250519-1_summary.PNG"
+    source = "../lol_inhouse_images/20250519-3_summary.PNG"
+    template = "image_template/summary_players.PNG"
+
+    img = match_template(source, template)
+    img = process_image(img, False)  # image dilation breaks player name a bit too much
+    extract_text(img)
+
     template = "image_template/summary_player_details.PNG"
 
     img = match_template(source, template)
-
-    # 숫자 위주
     img = process_image(img)
+    extract_text(img)
 
-    # # For player names
-    # img = process_image(img, False)
+    template = "image_template/summary_objectives.PNG"
 
+    img = match_template(source, template)
+    img = process_image(img)
+    extract_text(img)
+
+    source = "../lol_inhouse_images/20250519-3_vision.PNG"
+    template = "image_template/vision_vision.PNG"
+
+    img = match_template(source, template)
+    img = process_image(img)
     extract_text(img)
 
 
 if __name__ == "__main__":
-    # test_ocr_from_image()
-    # test_template_matching()
-
     main()

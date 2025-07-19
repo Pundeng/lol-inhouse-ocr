@@ -111,6 +111,13 @@ def main():
     img = process_image(img)
     extract_text(img)
 
+    source = "../lol_inhouse_images/20250519-3_damage.PNG"
+    template = "image_template/damage_damage.PNG"
+
+    img = match_template(source, template)
+    img = process_image(img)
+    extract_text(img)
+
 
 if __name__ == "__main__":
     main()

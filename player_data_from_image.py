@@ -2,16 +2,19 @@ import cv2 as cv
 import numpy as np
 import easyocr
 import pandas as pd
+import os
+import datetime
+import traceback
 
 from data_utils import parse_lists, create_player_dataframe, save_to_csv
 
 # NOTE: For whatever reason, if numpy is unavailable after installing easyocr run this command
 # pip install "numpy<2"
 
-match_code = "20250519-3"
-match_date = f"{match_code.split('-')[0][:4]}-{match_code.split('-')[0][4:6]}-{match_code.split('-')[0][6:]}"
-
 def match_template(source_path, template_path):
+    """
+    Finds and crops the region in the source image that matches the given template using OpenCV.
+    """
     img = cv.imread(source_path, cv.IMREAD_GRAYSCALE)
     assert img is not None, "file could not be read, check with os.path.exists()"
 
@@ -35,6 +38,9 @@ def match_template(source_path, template_path):
 
 
 def process_image(source, dilate=True):
+    """
+    Applies preprocessing steps like grayscale, thresholding, and optional dilation to enhance OCR accuracy.
+    """
     img = source
 
     # Strong blur to model the background
@@ -64,88 +70,174 @@ def process_image(source, dilate=True):
     return img
 
 
-def extract_text(img):
-    reader = easyocr.Reader(["en", "ko"], gpu=True)  # English + Korean
-    # results = reader.readtext(img, detail=1)
+def extract_all_images(images_with_templates):
+    """
+    Extracts and preprocesses a set of images given as (source, template) path tuples for OCR input.
+    """
+    reader = easyocr.Reader(["en", "ko"], gpu=True)
+    
+    total = len(images_with_templates)
+    results = []
+    
+    for idx, (source_path, template_path) in enumerate(images_with_templates):
+        progress_bar(template_path, idx + 1, total)
+
+        img = match_template(source_path, template_path)
+        img = process_image(img)
+        text = extract_text_with_reader(img, reader)
+        results.append(text)
+        
+    return results
+
+
+def extract_text_with_reader(img, reader):
+    """
+    Uses EasyOCR to extract grouped text lines from a processed image with an existing OCR reader.
+    """
     results = reader.readtext(img, detail=1, contrast_ths=0.05, adjust_contrast=0.7)
 
     texts, y, i = [], None, -1
-
-    # Group texts in similar y positions together
     for bbox, text, confidence in results:
         if y is None or bbox[0][1] > y + 50:
-            # Start a new row
             texts.append(text)
             y = bbox[0][1]
             i += 1
         else:
-            # join the current text to the row
             texts[i] += f" {text}"
-
-        # print(f"Detected: '{text}' (confidence: {confidence:.2f}) at {bbox}")
-
-    # [print(text) for text in texts]
-
     return texts
 
-def main():
-    print("scanning summary...")
-    source = f"../lol_inhouse_images/{match_code}_summary.PNG"
-    template = "image_template/summary_players.PNG"
 
-    img = match_template(source, template)
-    img = process_image(img, False)  # image dilation breaks player name a bit too much
-    player_names = extract_text(img)
+def progress_bar(task_name, step, total_steps, bar_width=20):
+    """
+    Prints a dynamic CLI progress bar to visualize which image is currently being processed.
+    """
+    percent = int((step / total_steps) * 100) - 1
+    filled = int(bar_width * step / total_steps)
+    bar = "o" * filled + "-" * (bar_width - filled)
+    print(f"{bar} {percent}%")
+    print(f'Scanning "{task_name}"\n')
+    
 
-    template = "image_template/summary_player_details.PNG"
+LOG_PATH = "process_log.txt"
+FAIL_PATH = "failed_matches.txt"
 
-    img = match_template(source, template)
-    img = process_image(img)
-    kda_cs_gold = extract_text(img)
+def run_all_from_folder(image_folder="../lol_inhouse_images"):
+    """
+    Processes all match images in the specified folder, extracts data, and saves results to CSVs.
+    """
+    log("Scanning folder for match codes...")
+    match_codes = set()
 
-    template = "image_template/summary_objectives.PNG"
+    for filename in os.listdir(image_folder):
+        if filename.endswith("_summary.PNG"):
+            match_code = filename.replace("_summary.PNG", "")
+            match_codes.add(match_code)
+        elif filename.endswith("_summary.png"):
+            match_code = filename.replace("_summary.png", "")
+            match_codes.add(match_code)
 
-    img = match_template(source, template)
-    img = process_image(img)
-    objectives = extract_text(img)
+    match_codes = sorted(match_codes)
+    log(f"Found {len(match_codes)} matches to process")
 
-    print("scanning vision...")
-    source = f"../lol_inhouse_images/{match_code}_vision.PNG"
-    template = "image_template/vision_vision.PNG"
+    for match_code in match_codes:
+        try:
+            log(f"Processing {match_code}...")
+            main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+            log(f"Finished {match_code}")
+        except Exception as e:
+            log(f"Error on {match_code}: {e}")
+            log_failed(match_code, traceback.format_exc())
 
-    img = match_template(source, template)
-    img = process_image(img)
-    vision = extract_text(img)
 
-    template = "image_template/vision_gold.PNG"
+def log(message):
+    """
+    Writes a timestamped log message to both the console and a persistent 'run_log.txt' file.
+    """
+    timestamp = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
+    full_msg = f"{timestamp} {message}"
+    print(full_msg)
+    with open(LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(full_msg + "\n")
 
-    img = match_template(source, template)
-    img = process_image(img)
-    vision_gold = extract_text(img)
 
-    print("scanning damage...")
-    source = f"../lol_inhouse_images/{match_code}_damage.PNG"
-    template = "image_template/damage_damage.PNG"
+def log_failed(match_code, err_msg=""):
+    """
+    Records the match code and optional error message to 'failed_matches.txt' if processing fails.
+    """
+    with open(FAIL_PATH, "a", encoding="utf-8") as f:
+        f.write(f"{match_code} - {err_msg}\n")
+   
+        
+def main(match_code):
+    """
+    Orchestrates the full flow of image extraction, parsing, and saving for a single match code.
+    """
+    
+    match_date = f"{match_code.split('-')[0][:4]}-{match_code.split('-')[0][4:6]}-{match_code.split('-')[0][6:]}"
+    images_to_ocr = [
+        (f"../lol_inhouse_images/{match_code}_summary.png", "image_template/summary_players.PNG"),
+        (f"../lol_inhouse_images/{match_code}_summary.png", "image_template/summary_player_details.PNG"),
+        (f"../lol_inhouse_images/{match_code}_summary.png", "image_template/summary_objectives.PNG"),
+        (f"../lol_inhouse_images/{match_code}_summary.png", "image_template/summary_time.PNG"),
+        (f"../lol_inhouse_images/{match_code}_vision.png", "image_template/vision_vision.PNG"),
+        (f"../lol_inhouse_images/{match_code}_vision.png", "image_template/vision_gold.PNG"),
+        (f"../lol_inhouse_images/{match_code}_damage.png", "image_template/damage_damage.PNG"),
+    ]
 
-    img = match_template(source, template)
-    img = process_image(img)
-    damages = extract_text(img)
+    data = extract_all_images(images_to_ocr)
+    
+    player_names = data[0]
+    kda_cs_gold = data[1]
+    objectives = data[2]
+    victory_time = data[3]
+    vision = data[4]
+    vision_gold = data[5]
+    damages = data[6]
+    
+    # player_names = ['Pundeng', 'Happier', '팔야의 점글러', 'Chefchoi', 'BbeunNa', '30 1 22 1 39 8', 'man from nowhere', '헤 문', '진짜힘들어', '네전공은나', 'Ity369']
+    # kda_cs_gold = ['6 / 7 / 2 164 10,485', '1 / 5 / 4 184 8,808', '3 / 8 / 7 173 9,891', '11 / 8 / 1 131 10,547', '1 / 3 / 9 12 6,752', '5 / 2 / 4 212 11,827', '5 / 6 / 17 32 10,264', '12 / 4 / 8 234 16,177', '3 / 2 / 6 149 9,830', '5 / 8 / 4 143 10,285']
+    # objectives = ['BANS + OBJECTIVES', '새', '1 0 0 0 0 3', 'BANS + OBJECTIVES', '씨 {', '7 2 1 3 1 0']
+    # vision =['VISION', 'Vision Score 33 13 27 26 19 12 54 22 7 17', 'Wards Placed 14 8 8 5 8 8 24 2 5 11', 'Wards Destroyed 3 0 3 5 2 0 8 3 0 2', 'Control Wards Purchased 0 0 4 5 4 0 3 2 0 1']
+    # damages = ['Total Damage to Champions 8,188 16,005 20,628 12,855 7,174 21,906 17,666 24,862 13,609 14,236', 'Physical Damage to Champions 134 15,298 3,530 10,919 3,850 14,612 1,307 22,808 3,296 12,311', 'Magic Damage to Champions 7828 299 15,151 1,166 0 6,332 15,851 0 10,168 0', 'True Damage to Champions 225 406 1,946 769 3,324 961 507 2,054 144 1,924', 'Total Damage Dealt 12,719 104,255 92,857 203,078 106,387 138,468 35,247 301,460 94,459 107,396', 'Physical Damage Dealt 822 103,168 15,676 146,630 102,883 115,025 4,477 233,714 32,844 105,062', 'Magic Damage Dealt 10,217 437 74,603 1,866 0 21,720 28,731 0 59,533 0', 'True Damage Dealt 1,679 649 2,576 54,582 3,504 1,723 2,038 67,745 2,081 2,334', 'Largest Critical Strike 18 416 0 0 617 0 0 0 7 463', 'Total Damage To Turrets 391 2,795 678 0 901 4,081 1,612 3,361 3,622 1,245', 'Total Damage To Objectives 761 6,646 4,491 8,722 1,786 13,140 5,135 36,694 12,374 8,361', 'DAMAGE TAKEN AND HEALED', 'Damage Healed 7,941 3,003 6,551 16,148 668 4,538 740 24,735 705 1,699', 'Damage Taken 4,838 24,147 31,935 34,649 24,633 14,051 14,041 40,299 9,948 20,878']
+    # vision_gold = ['INCOME', 'Gold Eamed 6,752 10,485 10,547 9,891 8,808 11.827 10 264 16,177 9,830 10,285']
 
-    # player_names = ['Pundeng', '이월길각 연구원', '네전공은나', 'Ity369', 'shosho ebi', '14 1 35 1 18 8', '헤음', '진자힘들어', 'Sony AZR V', 'Chefchoi', 'Happier']
-    # kda_cs_gold = ['9 / 1 / 13 193 12,553', '9 / 2 / 3 207 13,450', '4 / 1 / 5 151 8,763', '11 / 8 / 5 135 10,946', '2 / 2 / 13 31 8,476', '3 / 7 / 8 27 7,537', '4 / 7 / 3 155 9,838', '2 / 7 / 6 129 8,067', '4 / 9 / 1 121 8,883', '1 / 5 / 0 167 7,824']
-    # objectives = ['BANS + OBJECTIVES', '8 1 0 3 1 0', 'BANS + OBJECTIVES', '2 0 0 0 0 3']
-    # vision = ['VISION', 'Vision Score 60 12 12 13 16 44 18 12 14 13', 'Wards Placed 28 8 6 8 2 12 4 7 5 8', 'Wards Destroyed 6 1 2 2 3 5 1 0 3 2', 'Control Wards Purchased 7 0 0 0 0 3 3 0 3 4']
-    # damages = ['Total Damage to Champions 20,758 21,518 12,677 12,204 20,397 9,171 16,422 11,665 14,002 4,552', 'Physical Damage to Champions 945 18,659 1,953 9,506 19,877 1,799 13,240 10,343 344 1,582', 'Magic Damage to Champions 19,812 1,627 10,724 2,697 0 6,361 1,839 434 13,658 2,970', 'True Damage to Champions 0 1,232 0 0 520 1.009 1,343 832 0 0', 'Total Damage Dealt 47,835 105,068 119,769 140 097 249,320 25,719 197,034 79,030 71,011 101,346', 'Physical Damage Dealt 4,498 94,206 43,532 125,658 176,844 5,989 109,656 70,260 7,887 26,338', 'Magic Damage Dealt 41,279 3,397 58,962 13,906 0 13,727 20.434 775 62,488 65,337', 'True Damage Dealt 2,058 7,465 17,275 532 72,475 6,002 66,942 7995 636 9,670', 'Largest Critical Strike 0 386 6 0 294 0 7 0 0 179', 'Total Damage To Turrets 727 4,182 3,417 10,506 6,151 102 121 3,505 2,364 3,646', 'Total Damage To Objectives 9,830 12,976 5,593 11,993 36,533 447 8,658 3,755 2,364 4,298', 'DAMAGE TAKEN AND HEALED', 'Damage Healed 2,781 2,496 1,188 7,832 17,493 1,878 9,843 3,287 3,174 2,154', 'Damage Taken 13,116 17,366 8,397 16,570 27,939 17,740 26,852 18,140 27,496 18,896']
-    # vision_gold = ['Gold Earned 8,476 10,946 8,763 13,450 12,553 7537 9,838 8,067 8,883 7824']
+    print(player_names)
+    print(kda_cs_gold)
+    print(objectives)
+    print(victory_time)
+    print(vision)
+    print(damages)
+    print(vision_gold)
 
-    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+    # for i in range(len(damages)):
+    #     print(i, " ", damages[i])
 
-    df = create_player_dataframe(summary_data, damage_data, vision_data, match_code, match_date)
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(
+                                                                                    player_names, kda_cs_gold, 
+                                                                                    objectives, vision, 
+                                                                                    vision_gold, damages, 
+                                                                                    victory_time)
+
+    # print("------------------------------------")
+    # print(summary_data)
+    # print(damage_data)
+    # print(vision_data)
+    # print(team_data)
+
+    # vision_data["control_wards_purchased"] = [1, 6, 0, 4, 3, 1, 0, 3, 0, 0]
+
+    df = create_player_dataframe(summary_data, damage_data, vision_data, match_code, match_date, team1_victory, game_duration)
 
     save_to_csv(df, match_code)
+    
+    # images_to_ocr = [
+    #     (f"../lol_inhouse_images/{match_code}_summary.png", "image_template/summary_time.PNG"),
+    # ]
 
-
+    # data = extract_all_images(images_to_ocr)
+    # print(data)
 
 
 if __name__ == "__main__":
-    main()
+    run_all_from_folder()
+    # main("20250519-1")

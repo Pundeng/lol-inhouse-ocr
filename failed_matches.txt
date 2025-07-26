@@ -1,0 +1,2191 @@
+20250525-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 103, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 114, in reorder_by_vision_gold
+    vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
+                   ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '골드'
+
+20250525-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 103, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 114, in reorder_by_vision_gold
+    vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
+                   ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '골드'
+
+20250707-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 76, in parse_lists
+    damage_data["tower_damage"] = parse_dmg_line_four(damages[9])
+                                                      ~~~~~~~^^^
+IndexError: list index out of range
+
+20250707-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 15, in parse_lists
+    player_names.pop(5)
+    ~~~~~~~~~~~~~~~~^^^
+IndexError: pop index out of range
+
+20250707-3 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 103, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 110, in reorder_by_vision_gold
+    vision_gold_line = vision_gold_line[1]
+                       ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+20250525-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 103, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 114, in reorder_by_vision_gold
+    vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
+                   ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '골드'
+
+20250525-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 103, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 114, in reorder_by_vision_gold
+    vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
+                   ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '골드'
+
+20250707-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 76, in parse_lists
+    damage_data["tower_damage"] = parse_dmg_line_four(damages[9])
+                                                      ~~~~~~~^^^
+IndexError: list index out of range
+
+20250707-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 15, in parse_lists
+    player_names.pop(5)
+    ~~~~~~~~~~~~~~~~^^^
+IndexError: pop index out of range
+
+20250707-3 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 130, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 187, in main
+    summary_data, damage_data, vision_data, team_stats = parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages)
+                                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 103, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 110, in reorder_by_vision_gold
+    vision_gold_line = vision_gold_line[1]
+                       ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+20250519-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250519-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250519-3 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250519-4 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250519-5 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250519-6 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250524-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250524-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250524-3 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250524-4 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250524-5 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250525-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 188, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(player_names,
+                                                                                      ~~~~~~~~~~~^^^^^^^^^^^^^^
+                                                                                   kda_cs_gold,
+                                                                                   ^^^^^^^^^^^^
+    ...<3 lines>...
+                                                                                   damages,
+                                                                                   ^^^^^^^^
+                                                                                   victory_time)
+                                                                                   ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 102, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 137, in reorder_by_vision_gold
+    vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
+                   ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '골드'
+
+20250525-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 188, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(player_names,
+                                                                                      ~~~~~~~~~~~^^^^^^^^^^^^^^
+                                                                                   kda_cs_gold,
+                                                                                   ^^^^^^^^^^^^
+    ...<3 lines>...
+                                                                                   damages,
+                                                                                   ^^^^^^^^
+                                                                                   victory_time)
+                                                                                   ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 102, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 137, in reorder_by_vision_gold
+    vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
+                   ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '골드'
+
+20250529-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250529-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250603-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250603-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250603-3 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250612-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250612-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250627-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250627-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250627-3 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250627-4 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250627-5 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250707-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 188, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(player_names,
+                                                                                      ~~~~~~~~~~~^^^^^^^^^^^^^^
+                                                                                   kda_cs_gold,
+                                                                                   ^^^^^^^^^^^^
+    ...<3 lines>...
+                                                                                   damages,
+                                                                                   ^^^^^^^^
+                                                                                   victory_time)
+                                                                                   ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 76, in parse_lists
+    damage_data["tower_damage"] = parse_dmg_line_four(damages[9])
+                                                      ~~~~~~~^^^
+IndexError: list index out of range
+
+20250707-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 188, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(player_names,
+                                                                                      ~~~~~~~~~~~^^^^^^^^^^^^^^
+                                                                                   kda_cs_gold,
+                                                                                   ^^^^^^^^^^^^
+    ...<3 lines>...
+                                                                                   damages,
+                                                                                   ^^^^^^^^
+                                                                                   victory_time)
+                                                                                   ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 15, in parse_lists
+    player_names.pop(5)
+    ~~~~~~~~~~~~~~~~^^^
+IndexError: pop index out of range
+
+20250707-3 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 188, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(player_names,
+                                                                                      ~~~~~~~~~~~^^^^^^^^^^^^^^
+                                                                                   kda_cs_gold,
+                                                                                   ^^^^^^^^^^^^
+    ...<3 lines>...
+                                                                                   damages,
+                                                                                   ^^^^^^^^
+                                                                                   victory_time)
+                                                                                   ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 102, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 133, in reorder_by_vision_gold
+    vision_gold_line = vision_gold_line[1]
+                       ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+20250712-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250712-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250713-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250718-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250718-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250718-3 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250719-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250719-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250722-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250722-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 127, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 206, in main
+    save_to_csv(df, match_code)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 239, in save_to_csv
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\format.py", line 995, in to_csv
+    csv_formatter = CSVFormatter(
+        path_or_buf=path_or_buf,
+    ...<15 lines>...
+        formatter=self.fmt,
+    )
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 98, in __init__
+    self.cols = self._initialize_columns(cols)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\csvs.py", line 167, in _initialize_columns
+    self.obj = self.obj.loc[:, cols]
+               ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+    return self._getitem_tuple(key)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1377, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1020, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['damage_received'] not in index"
+
+20250525-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 145, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 215, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(
+                                                                                      ~~~~~~~~~~~^
+                                                                                    player_names, kda_cs_gold,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                    objectives, vision,
+                                                                                    ^^^^^^^^^^^^^^^^^^^
+                                                                                    vision_gold, damages,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^
+                                                                                    victory_time)
+                                                                                    ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 137, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 179, in reorder_by_vision_gold
+    vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
+                   ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '골드'
+
+20250525-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 145, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 215, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(
+                                                                                      ~~~~~~~~~~~^
+                                                                                    player_names, kda_cs_gold,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                    objectives, vision,
+                                                                                    ^^^^^^^^^^^^^^^^^^^
+                                                                                    vision_gold, damages,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^
+                                                                                    victory_time)
+                                                                                    ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 137, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 179, in reorder_by_vision_gold
+    vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
+                   ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '골드'
+

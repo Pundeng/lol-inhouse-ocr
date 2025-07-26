@@ -11,19 +11,6 @@ USE lol_inhouse;
 -- metabase 실행 방법
 java -jar metabase.jar
 
--- csv 업로드
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/20250519-6_Match_Data.csv'
-INTO TABLE match_data
-CHARACTER SET utf8mb4
-FIELDS TERMINATED BY ',' 
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS
-(match_date, match_code, team, player_name, position, champion,
- kills, deaths, assists, cs, gold,
- damage_dealt, tower_damage, vision_score, wards_placed,
- objectives_score, victory, game_duration);
-
 -- 중복 확인
 SELECT match_code, player_name, position, COUNT(*) AS cnt
 FROM match_data

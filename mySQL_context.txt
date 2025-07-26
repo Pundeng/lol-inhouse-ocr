@@ -1,6 +1,6 @@
 
 -- 1. 모든 데이터 삭제
-DELETE FROM matches;
+DELETE FROM match_data;
 
 -- 2. AUTO_INCREMENT 초기화
 ALTER TABLE matches AUTO_INCREMENT = 1;

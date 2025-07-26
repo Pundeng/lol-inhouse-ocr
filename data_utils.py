@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import re
+import difflib
 
 nickname_map = {
     "Pundeng": "정윤재",
@@ -10,26 +11,20 @@ nickname_map = {
     "BbeunNa": "이수진",
     "man from nowhere": "장우주",
     "혜 윰": "문상휘",
-    "혜 움": "문상휘",
-    "혜 문": "문상휘",
     "fleur de peau": "문상휘",
     "진짜힘들어": "심시온",
-    "진자힘들어": "심시온",
-    "진자림들어": "심시온",
     "네전공은나": "최광호",
-    "네 전 공 은 나": "최광호",
     "lty369": "임태우",
-    "Ity369": "임태우",
     "shosho ebi": "이곤섭",
     "이렐킬각연구원": "김주헌",
     "상 체 파 괴 자": "김주헌",
-    "상체파괴자": "김주헌",
     "Sony A7R V": "한종인",
     "SoLa": "김태형",
     "ClimbingIsFun": "이정웅",
     "crocaw": "최명진",
     "krim123456789": "임태윤",
     "dono jelly": "황승훈",
+    "mushroom farmer": "김민준",
 }
 
 def parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages, victory_time):
@@ -139,12 +134,20 @@ def parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, dama
 
     return reordered_summary, damage_data, vision_data, team_stats, team1_victory, game_duration
  
-def map_player_names(player_names, nickname_map):
+def map_player_names(player_names, nickname_map, cutoff=0.5):
     """
-    Replace in-game nicknames with real names using the provided nickname map.
-    If a nickname is not found in the map, it is left unchanged.
+    Map player names to real names using string similarity matching.
     """
-    return [nickname_map.get(name, name) for name in player_names]
+    mapped_names = []
+    nickname_keys = list(nickname_map.keys())
+
+    for name in player_names:
+        match = difflib.get_close_matches(name, nickname_keys, n=1, cutoff=cutoff)
+        if match:
+            mapped_names.append(nickname_map[match[0]])
+        else:
+            mapped_names.append(name)  # fallback to original
+    return mapped_names
     
 def parse_outcome_and_duration(victory_time):
     """

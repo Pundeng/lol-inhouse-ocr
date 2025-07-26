@@ -2,9 +2,9 @@ import cv2 as cv
 import numpy as np
 import easyocr
 import pandas as pd
-import os
-import datetime
-import traceback
+# import os
+# import datetime
+# import traceback
 
 from data_utils import parse_lists, create_player_dataframe, save_to_csv
 
@@ -193,13 +193,6 @@ def main(match_code):
     vision = data[4]
     vision_gold = data[5]
     damages = data[6]
-    
-    # player_names = ['Pundeng', 'Happier', '팔야의 점글러', 'Chefchoi', 'BbeunNa', '30 1 22 1 39 8', 'man from nowhere', '헤 문', '진짜힘들어', '네전공은나', 'Ity369']
-    # kda_cs_gold = ['6 / 7 / 2 164 10,485', '1 / 5 / 4 184 8,808', '3 / 8 / 7 173 9,891', '11 / 8 / 1 131 10,547', '1 / 3 / 9 12 6,752', '5 / 2 / 4 212 11,827', '5 / 6 / 17 32 10,264', '12 / 4 / 8 234 16,177', '3 / 2 / 6 149 9,830', '5 / 8 / 4 143 10,285']
-    # objectives = ['BANS + OBJECTIVES', '새', '1 0 0 0 0 3', 'BANS + OBJECTIVES', '씨 {', '7 2 1 3 1 0']
-    # vision =['VISION', 'Vision Score 33 13 27 26 19 12 54 22 7 17', 'Wards Placed 14 8 8 5 8 8 24 2 5 11', 'Wards Destroyed 3 0 3 5 2 0 8 3 0 2', 'Control Wards Purchased 0 0 4 5 4 0 3 2 0 1']
-    # damages = ['Total Damage to Champions 8,188 16,005 20,628 12,855 7,174 21,906 17,666 24,862 13,609 14,236', 'Physical Damage to Champions 134 15,298 3,530 10,919 3,850 14,612 1,307 22,808 3,296 12,311', 'Magic Damage to Champions 7828 299 15,151 1,166 0 6,332 15,851 0 10,168 0', 'True Damage to Champions 225 406 1,946 769 3,324 961 507 2,054 144 1,924', 'Total Damage Dealt 12,719 104,255 92,857 203,078 106,387 138,468 35,247 301,460 94,459 107,396', 'Physical Damage Dealt 822 103,168 15,676 146,630 102,883 115,025 4,477 233,714 32,844 105,062', 'Magic Damage Dealt 10,217 437 74,603 1,866 0 21,720 28,731 0 59,533 0', 'True Damage Dealt 1,679 649 2,576 54,582 3,504 1,723 2,038 67,745 2,081 2,334', 'Largest Critical Strike 18 416 0 0 617 0 0 0 7 463', 'Total Damage To Turrets 391 2,795 678 0 901 4,081 1,612 3,361 3,622 1,245', 'Total Damage To Objectives 761 6,646 4,491 8,722 1,786 13,140 5,135 36,694 12,374 8,361', 'DAMAGE TAKEN AND HEALED', 'Damage Healed 7,941 3,003 6,551 16,148 668 4,538 740 24,735 705 1,699', 'Damage Taken 4,838 24,147 31,935 34,649 24,633 14,051 14,041 40,299 9,948 20,878']
-    # vision_gold = ['INCOME', 'Gold Eamed 6,752 10,485 10,547 9,891 8,808 11.827 10 264 16,177 9,830 10,285']
 
     print(player_names)
     print(kda_cs_gold)
@@ -240,4 +233,4 @@ def main(match_code):
 
 if __name__ == "__main__":
     run_all_from_folder()
-    # main("20250519-1")
+    # main("20250725-3")

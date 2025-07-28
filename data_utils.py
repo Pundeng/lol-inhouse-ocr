@@ -277,7 +277,7 @@ def save_to_csv(df, match_code, save_dir="data_csv"):
         "match_date", "match_code", "team", "player_name", "position", "champion",
         "kills", "deaths", "assists", "cs", "gold", "first_blood", "pentakill",
         "damage_dealt", "tower_damage", "healing", "damage_taken",
-        "vision_score", "wards_placed", "wards_destroyed", "victory", "game_duration"
+        "vision_score", "wards_placed", "wards_destroyed", "control_wards_purchased", "victory", "game_duration"
     ]
     
     os.makedirs(save_dir, exist_ok=True)
@@ -287,3 +287,73 @@ def save_to_csv(df, match_code, save_dir="data_csv"):
 
     df.to_csv(csv_path, index=False, encoding="utf-8-sig", columns=ordered_columns)
     return csv_path
+
+
+def save_team_data_to_csv(team_data, match_code, match_date, team1_victory, save_dir="data_csv_team"):
+    """
+    Save team-level statistics to a separate CSV file.
+    
+    Returns:
+        str: Full path to the saved CSV file.
+    """
+    os.makedirs(save_dir, exist_ok=True)
+
+    # Add match-level metadata to each row
+    for team in team_data:
+        team["match_code"] = match_code
+        team["match_date"] = match_date
+        team["victory"] = team1_victory if team["team"] == 1 else (1 - team1_victory)
+
+
+    # Define desired column order
+    column_order = [
+        "match_code", "team", "turrets_destroyed",
+        "barons", "dragons", "heralds", "voidgrubs", "victory"
+    ]
+
+    df = pd.DataFrame(team_data)
+
+    # Handle missing columns if any
+    for col in column_order:
+        if col not in df.columns:
+            df[col] = None
+
+    df = df[column_order]
+
+    # Save CSV with UTF-8 BOM
+    file_path = os.path.join(save_dir, f"{match_code}_team.csv")
+    df.to_csv(file_path, index=False, encoding="utf-8-sig")
+    print(f"Created: {file_path}")
+
+
+def generate_ban_csv(image_folder="../lol_inhouse_images", save_dir="data_csv_ban"):
+    """
+    For every match_code in image filenames, generate a dummy ban CSV.
+    CSV format: match_code, team, ban_order, champion
+    """
+    os.makedirs(save_dir, exist_ok=True)
+    match_codes = set()
+
+    for filename in os.listdir(image_folder):
+        if filename.endswith("_summary.PNG"):
+            match_code = filename.replace("_summary.PNG", "")
+            match_codes.add(match_code)
+        elif filename.endswith("_summary.png"):
+            match_code = filename.replace("_summary.png", "")
+            match_codes.add(match_code)
+            
+    for match_code in sorted(match_codes):
+        rows = []
+        for team in [1, 2]:
+            for order in range(1, 6):  # ban_order 1~5
+                rows.append({
+                    "match_code": match_code,
+                    "team": team,
+                    "ban_order": order,
+                    "champion": "Unknown"
+                })
+
+        df = pd.DataFrame(rows)
+        file_path = os.path.join(save_dir, f"{match_code}_ban.csv")
+        df.to_csv(file_path, index=False, encoding="utf-8-sig")
+        print(f"Created: {file_path}")

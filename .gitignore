@@ -2,3 +2,6 @@ upload_csv_to_sql.py
 mySQL_context.txt
 process_log.txt
 failed_matches.txt
+failed_matches_1.txt
+failed_matches.txt
+process_log.txt

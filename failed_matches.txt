@@ -2,7 +2,7 @@
   File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 145, in run_all_from_folder
     main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
     ~~~~^^^^^^^^^^^^
-  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 215, in main
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 208, in main
     summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(
                                                                                       ~~~~~~~~~~~^
                                                                                     player_names, kda_cs_gold,
@@ -13,9 +13,9 @@
                                                                                     ^^^^^^^^^^^^^^^^^^^^^
                                                                                     victory_time)
                                                                                     ^^^^^^^^^^^^^
-  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 137, in parse_lists
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 132, in parse_lists
     reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
-  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 179, in reorder_by_vision_gold
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 182, in reorder_by_vision_gold
     vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
                    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: invalid literal for int() with base 10: '골드'
@@ -24,7 +24,7 @@ ValueError: invalid literal for int() with base 10: '골드'
   File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 145, in run_all_from_folder
     main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
     ~~~~^^^^^^^^^^^^
-  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 215, in main
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 208, in main
     summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(
                                                                                       ~~~~~~~~~~~^
                                                                                     player_names, kda_cs_gold,
@@ -35,10 +35,72 @@ ValueError: invalid literal for int() with base 10: '골드'
                                                                                     ^^^^^^^^^^^^^^^^^^^^^
                                                                                     victory_time)
                                                                                     ^^^^^^^^^^^^^
-  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 137, in parse_lists
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 132, in parse_lists
     reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
-  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 179, in reorder_by_vision_gold
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 182, in reorder_by_vision_gold
     vision_gold = [int(g.replace(",", "").replace(".","")) for g in gold_strs]
                    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: invalid literal for int() with base 10: '골드'
+
+20250707-1 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 145, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 208, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(
+                                                                                      ~~~~~~~~~~~^
+                                                                                    player_names, kda_cs_gold,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                    objectives, vision,
+                                                                                    ^^^^^^^^^^^^^^^^^^^
+                                                                                    vision_gold, damages,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^
+                                                                                    victory_time)
+                                                                                    ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 106, in parse_lists
+    damage_data["tower_damage"] = parse_dmg_line_four(damages[9])
+                                                      ~~~~~~~^^^
+IndexError: list index out of range
+
+20250707-2 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 145, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 208, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(
+                                                                                      ~~~~~~~~~~~^
+                                                                                    player_names, kda_cs_gold,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                    objectives, vision,
+                                                                                    ^^^^^^^^^^^^^^^^^^^
+                                                                                    vision_gold, damages,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^
+                                                                                    victory_time)
+                                                                                    ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 43, in parse_lists
+    player_names.pop(5)
+    ~~~~~~~~~~~~~~~~^^^
+IndexError: pop index out of range
+
+20250707-3 - Traceback (most recent call last):
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 145, in run_all_from_folder
+    main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+    ~~~~^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\player_data_from_image.py", line 208, in main
+    summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(
+                                                                                      ~~~~~~~~~~~^
+                                                                                    player_names, kda_cs_gold,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                    objectives, vision,
+                                                                                    ^^^^^^^^^^^^^^^^^^^
+                                                                                    vision_gold, damages,
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^
+                                                                                    victory_time)
+                                                                                    ^^^^^^^^^^^^^
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 132, in parse_lists
+    reordered_summary = reorder_by_vision_gold(summary_data, vision_gold)
+  File "C:\Users\JHUANPC\Desktop\Projects\lol_inhouse_ocr\data_utils.py", line 178, in reorder_by_vision_gold
+    vision_gold_line = vision_gold_line[1]
+                       ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
 

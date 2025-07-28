@@ -2,11 +2,11 @@ import cv2 as cv
 import numpy as np
 import easyocr
 import pandas as pd
-# import os
-# import datetime
-# import traceback
+import os
+import datetime
+import traceback
 
-from data_utils import parse_lists, create_player_dataframe, save_to_csv
+from data_utils import parse_lists, create_player_dataframe, save_to_csv, save_team_data_to_csv, generate_ban_csv
 
 # NOTE: For whatever reason, if numpy is unavailable after installing easyocr run this command
 # pip install "numpy<2"
@@ -223,6 +223,7 @@ def main(match_code):
 
     save_to_csv(df, match_code)
     
+    save_team_data_to_csv(team_data, match_code, match_date, team1_victory)
     # images_to_ocr = [
     #     (f"../lol_inhouse_images/{match_code}_summary.png", "image_template/summary_time.PNG"),
     # ]
@@ -233,4 +234,5 @@ def main(match_code):
 
 if __name__ == "__main__":
     run_all_from_folder()
+    # generate_ban_csv()
     # main("20250725-3")

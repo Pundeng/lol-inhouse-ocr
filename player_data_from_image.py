@@ -234,5 +234,5 @@ def main(match_code):
 
 if __name__ == "__main__":
     run_all_from_folder()
-    # generate_ban_csv()
+    generate_ban_csv()
     # main("20250725-3")

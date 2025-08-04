@@ -327,7 +327,7 @@ def save_team_data_to_csv(team_data, match_code, match_date, team1_victory, save
     print(f"Created: {file_path}")
 
 
-def generate_ban_csv(image_folder="../lol_inhouse_images", save_dir="data_csv_ban"):
+def generate_ban_csv(image_folder="../lol_inhouse_images_notdone", save_dir="data_csv_ban"):
     """
     For every match_code in image filenames, generate a dummy ban CSV.
     CSV format: match_code, team, ban_order, champion

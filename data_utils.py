@@ -26,6 +26,7 @@ nickname_map = {
     "dono jelly": "황승훈",
     "mushroom farmer": "김민준",
     "Hana": "강우찬",
+    "FREEDOMFROMALL": "김민기",
 }
 
 def parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages, victory_time):

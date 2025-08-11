@@ -121,7 +121,7 @@ def progress_bar(task_name, step, total_steps, bar_width=20):
 LOG_PATH = "process_log.txt"
 FAIL_PATH = "failed_matches.txt"
 
-def run_all_from_folder(image_folder="../lol_inhouse_images"):
+def run_all_from_folder(image_folder="../lol_inhouse_images_notdone"):
     """
     Processes all match images in the specified folder, extracts data, and saves results to CSVs.
     """

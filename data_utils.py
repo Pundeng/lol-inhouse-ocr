@@ -81,7 +81,7 @@ def parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, dama
         "damage_dealt": [],
         "tower_damage": [],
         "healing": [],
-        "damage_taken": [],
+        "damage_received": [],
     }
 
     def parse_dmg_line_four(line):
@@ -107,7 +107,7 @@ def parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, dama
     damage_data["damage_dealt"] = parse_dmg_line_four(damages[0])
     damage_data["tower_damage"] = parse_dmg_line_four(damages[9])
     damage_data["healing"] = parse_dmg_line_two(damages[-2])
-    damage_data["damage_taken"] = parse_dmg_line_two(damages[-1])
+    damage_data["damage_received"] = parse_dmg_line_two(damages[-1])
     
     # objectives data
     team_stats = []
@@ -232,7 +232,7 @@ def create_player_dataframe(summary_data, damage_data, vision_data, match_code, 
     damage_dealt = get_list_or_default(damage_data, "damage_dealt", 0)
     tower_damage = get_list_or_default(damage_data, "tower_damage", 0)
     healing = get_list_or_default(damage_data, "healing", 0)
-    damage_taken = get_list_or_default(damage_data, "damage_taken", 0)
+    damage_received = get_list_or_default(damage_data, "damage_received", 0)
     vision_score = get_list_or_default(vision_data, "vision_score", 0)
     wards_placed = get_list_or_default(vision_data, "wards_placed", 0)
     wards_destroyed = get_list_or_default(vision_data, "wards_destroyed", 0)
@@ -259,7 +259,7 @@ def create_player_dataframe(summary_data, damage_data, vision_data, match_code, 
             "damage_dealt": damage_dealt[i],
             "tower_damage": tower_damage[i],
             "healing": healing[i],
-            "damage_taken": damage_taken[i],
+            "damage_received": damage_received[i],
             "vision_score": vision_score[i],
             "wards_placed": wards_placed[i],
             "wards_destroyed": wards_destroyed[i],
@@ -278,7 +278,7 @@ def save_to_csv(df, match_code, save_dir="data_csv"):
     ordered_columns = [
         "match_date", "match_code", "team", "player_name", "position", "champion",
         "kills", "deaths", "assists", "cs", "gold", "first_blood", "pentakill",
-        "damage_dealt", "tower_damage", "healing", "damage_taken",
+        "damage_dealt", "tower_damage", "healing", "damage_received",
         "vision_score", "wards_placed", "wards_destroyed", "control_wards_purchased", "victory", "game_duration"
     ]
     

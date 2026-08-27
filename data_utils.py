@@ -3,31 +3,8 @@ import pandas as pd
 import re
 import difflib
 
-nickname_map = {
-    "Pundeng": "정윤재",
-    "Happier": "허균",
-    "광야의 정글러": "이승연",
-    "ChefChoi": "최진석",
-    "BbeunNa": "이수진",
-    "man from nowhere": "장우주",
-    "혜 윰": "문상휘",
-    "fleur de peau": "문상휘",
-    "진짜힘들어": "심시온",
-    "네전공은나": "최광호",
-    "lty369": "임태우",
-    "shosho ebi": "이곤섭",
-    "이렐킬각연구원": "김주헌",
-    "상 체 파 괴 자": "김주헌",
-    "Sony A7R V": "한종인",
-    "SoLa": "김태형",
-    "ClimbingIsFun": "이정웅",
-    "crocaw": "최명진",
-    "krim123456789": "임태윤",
-    "dono jelly": "황승훈",
-    "mushroom farmer": "김민준",
-    "Hana": "강우찬",
-    "FREEDOMFROMALL": "김민기",
-}
+nickname_map = {} 
+
 
 def parse_lists(player_names, kda_cs_gold, objectives, vision, vision_gold, damages, victory_time):
     """

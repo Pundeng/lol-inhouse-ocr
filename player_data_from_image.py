@@ -142,7 +142,7 @@ def run_all_from_folder(image_folder="../lol_inhouse_images_notdone"):
     for match_code in match_codes:
         try:
             log(f"Processing {match_code}...")
-            main(match_code)  # 너의 main(match_code) 함수가 여기 있어야 함
+            main(match_code)
             log(f"Finished {match_code}")
         except Exception as e:
             log(f"Error on {match_code}: {e}")
@@ -202,8 +202,6 @@ def main(match_code):
     print(damages)
     print(vision_gold)
 
-    # for i in range(len(damages)):
-    #     print(i, " ", damages[i])
 
     summary_data, damage_data, vision_data, team_data, team1_victory, game_duration = parse_lists(
                                                                                     player_names, kda_cs_gold, 
@@ -211,28 +209,14 @@ def main(match_code):
                                                                                     vision_gold, damages, 
                                                                                     victory_time)
 
-    # print("------------------------------------")
-    # print(summary_data)
-    # print(damage_data)
-    # print(vision_data)
-    # print(team_data)
-
-    # vision_data["control_wards_purchased"] = [1, 6, 0, 4, 3, 1, 0, 3, 0, 0]
 
     df = create_player_dataframe(summary_data, damage_data, vision_data, match_code, match_date, team1_victory, game_duration)
 
     save_to_csv(df, match_code)
     
     save_team_data_to_csv(team_data, match_code, match_date, team1_victory)
-    # images_to_ocr = [
-    #     (f"../lol_inhouse_images/{match_code}_summary.png", "image_template/summary_time.PNG"),
-    # ]
-
-    # data = extract_all_images(images_to_ocr)
-    # print(data)
 
 
 if __name__ == "__main__":
     run_all_from_folder()
     generate_ban_csv()
-    # main("20250725-3")

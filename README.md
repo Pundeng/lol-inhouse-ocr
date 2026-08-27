@@ -75,14 +75,6 @@ The application processes available matches and writes structured results to CSV
 
 > The project was developed around a specific set of League of Legends post-game screenshot layouts, so additional configuration may be required for different resolutions or UI versions.
 
-## My Contribution
-
-This project was developed collaboratively with one other developer.
-
-I implemented the majority of the project, including the core OCR workflow, image-processing pipeline, data parsing, and integration of extracted statistics into structured output. My collaborator contributed to portions of the implementation and helped with development and testing.
-
-I understand and can explain the complete pipeline, including the collaboratively written portions.
-
 ## Limitations
 
 * The current template-matching approach is designed around specific League of Legends post-game UI layouts.
